@@ -5,7 +5,7 @@ set -x
 
 mv $SRC/cncf-fuzzing/projects/cubefs/fuzz_master.go $SRC/cubefs/master/
 
-go mod tidy
+go mod tidy -compat=1.17
 go mod vendor
 go get github.com/AdaLogics/go-fuzz-headers
 source $SRC/cubefs/build/cgo_env.sh
